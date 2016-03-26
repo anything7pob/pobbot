@@ -26,9 +26,10 @@ class TwitterAPI:
 
 if __name__ == "__main__":
     twitter = TwitterAPI()
-    twitter.tweet() #You probably want to remove this line
+    import random
+    text = random.choice(open('twoots.txt').readlines())
+    twitter.tweet(text) #You probably want to remove this line
     while True:
-        import random
-        text = random.choice(open('twoots.txt').readlines())
-        self.post_tweet(text)
+        
+        
         time.sleep(60)
