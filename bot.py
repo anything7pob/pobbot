@@ -28,7 +28,7 @@ if __name__ == "__main__":
     twitter = TwitterAPI()
     twitter.tweet() #You probably want to remove this line
     while True:
-            import random
+        import random
         text = random.choice(open('twoots.txt').readlines())
         self.post_tweet(text)
         time.sleep(60)
