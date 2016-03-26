@@ -30,6 +30,4 @@ if __name__ == "__main__":
     text = random.choice(open('twoots.txt').readlines())
     twitter.tweet(text) #You probably want to remove this line
     while True:
-        
-        
-        time.sleep(60)
+    time.sleep(60)
