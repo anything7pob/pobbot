@@ -28,10 +28,8 @@ if __name__ == "__main__":
     twitter = TwitterAPI()
    
     while True:
-   #import random
-     #text = random.choice(open('twoots.txt').readlines())
-     #twitter.tweet(text) #You probably want to remove this line
-     #time.sleep(900)
-      piclocation = os.path.abspath('logo.png')
-      api.update_with_media(piclocation)
-       time.sleep(120)
+   import random
+     text = random.choice(open('twoots.txt').readlines())
+     twitter.tweet(text) #You probably want to remove this line
+     time.sleep(900)
+    
