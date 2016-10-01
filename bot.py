@@ -34,4 +34,4 @@ if __name__ == "__main__":
      #time.sleep(900)
       piclocation = os.path.abspath('logo.png')
       api.update_with_media(piclocation)
-       time.sleep(2)
+       time.sleep(120)
