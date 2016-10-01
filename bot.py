@@ -32,6 +32,6 @@ if __name__ == "__main__":
      #text = random.choice(open('twoots.txt').readlines())
      #twitter.tweet(text) #You probably want to remove this line
      #time.sleep(900)
-  piclocation = os.path.abspath('logo.png')
-  api.update_with_media(piclocation)
-  time.sleep(2)
+      piclocation = os.path.abspath('logo.png')
+      api.update_with_media(piclocation)
+       time.sleep(2)
