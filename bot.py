@@ -33,6 +33,6 @@ if __name__ == "__main__":
    import random
      text = random.choice(open('twoots.txt').readlines())
      happy = random.choice(wordz)
-     twitter.tweet(text,wordz) #You probably want to remove this line
+     twitter.tweet(text,happy) #You probably want to remove this line
      time.sleep(900)
     
