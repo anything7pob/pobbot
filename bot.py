@@ -31,8 +31,8 @@ if __name__ == "__main__":
    
     while True:
    import random
-    text = random.choice(open('twoots.txt').readlines())
+     text = random.choice(open('twoots.txt').readlines())
      #happy = random.choice(wordz)
-    twitter.tweet(text) #You probably want to remove this line
-    time.sleep(900)
+     twitter.tweet(text) #You probably want to remove this line
+     time.sleep(900)
     
