@@ -34,5 +34,5 @@ if __name__ == "__main__":
      text = random.choice(open('twoots.txt').readlines())
      #happy = random.choice(wordz)
      twitter.tweet(text) #You probably want to remove this line
-     time.sleep(900)
+     time.sleep(2200)
     
