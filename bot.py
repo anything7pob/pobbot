@@ -36,7 +36,7 @@ if __name__ == "__main__":
      twitter.tweet(text) #You probably want to remove this line  
      time.sleep(2200)
     
-for tweet in tweepy.Cursor(api.search, q='#Romford','#Chelmsford','Roofing').items():
+for tweet in tweepy.Cursor(api.search, q='#Romford''#Chelmsford''Roofing').items():
     try:
         print('\nTweet by: @' + tweet.user.screen_name)
 
