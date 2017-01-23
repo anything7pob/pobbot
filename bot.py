@@ -51,7 +51,12 @@ for tweet in tweepy.Cursor(api.search, q='romford''chelmsford''essex''roofing').
         tweet.user.follow()
         print('Followed the user')
         
-        time.sleep(3200)    
+        time.sleep(3200)  
+    except tweepy.TweepError as e:
+        print(e.reason)
+
+    except StopIteration:
+        break    
         
         
         
