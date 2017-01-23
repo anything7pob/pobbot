@@ -8,7 +8,7 @@ class TwitterAPI:
     with init.sh included with the heroku-twitterbot-starter
     """
 
-for tweet in tweepy.Cursor(api.search, q='#Romford','#Chelmsford','Roofing').items(10):
+for tweet in tweepy.Cursor(api.search, q='#Romford''#Chelmsford''Roofing').items(10):
     try:
         print('\nTweet by: @' + tweet.user.screen_name)
 
