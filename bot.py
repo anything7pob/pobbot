@@ -35,4 +35,5 @@ if __name__ == "__main__":
      #happy = random.choice(wordz)
      twitter.tweet(text) #You probably want to remove this line
      time.sleep(2200)
+     import twitterbot_retweet
     
