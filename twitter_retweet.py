@@ -19,10 +19,10 @@ for tweet in tweepy.Cursor(api.search, q='#Romford','#Chelmsford','Roofing').ite
         tweet.favorite()
         print('Favorited the tweet')
 
-    if not tweet.user.following:
-        # Don't forget to indent
-        tweet.user.follow()
-        print('Followed the user')
+        if not tweet.user.following:
+            # Don't forget to indent
+            tweet.user.follow()
+            print('Followed the user')
        
         
 
