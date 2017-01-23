@@ -23,7 +23,7 @@ class TwitterAPI:
 
     
 
-for tweet in tweepy.Cursor(self.search, q='romford''chelmsford''essex''roofing').items():
+for tweet in tweepy.Cursor(self.api.search, q='romford''chelmsford''essex''roofing').items():
     try:
         print('\nTweet by: @' + tweet.user.screen_name)
 
