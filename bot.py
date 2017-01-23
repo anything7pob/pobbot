@@ -35,20 +35,20 @@ if __name__ == "__main__":
      #happy = random.choice(wordz)
      twitter.tweet(text) #You probably want to remove this line  
      for tweet in tweepy.Cursor(api.search, q='#Romford','#Chelmsford','Roofing').items():
-    try:
-        print('\nTweet by: @' + tweet.user.screen_name)
+         try:
+            print('\nTweet by: @' + tweet.user.screen_name)
 
-        tweet.retweet()
-        print('Retweeted the tweet')
+            tweet.retweet()
+            print('Retweeted the tweet')
 
-        # Favorite the tweet
-        tweet.favorite()
-        print('Favorited the tweet')
+            # Favorite the tweet
+            tweet.favorite()
+            print('Favorited the tweet')
 
-        if not tweet.user.following:
-            # Don't forget to indent
-            tweet.user.follow()
-            print('Followed the user')
+            if not tweet.user.following:
+                # Don't forget to indent
+                tweet.user.follow()
+                print('Followed the user')
        
         
 
