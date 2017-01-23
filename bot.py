@@ -34,7 +34,33 @@ if __name__ == "__main__":
      text = random.choice(open('twoots.txt').readlines())
      #happy = random.choice(wordz)
      twitter.tweet(text) #You probably want to remove this line  
-     time.sleep(2200)
+     for tweet in tweepy.Cursor(api.search, q='#Romford','#Chelmsford','Roofing').items():
+    try:
+        print('\nTweet by: @' + tweet.user.screen_name)
+
+        tweet.retweet()
+        print('Retweeted the tweet')
+
+        # Favorite the tweet
+        tweet.favorite()
+        print('Favorited the tweet')
+
+        if not tweet.user.following:
+            # Don't forget to indent
+            tweet.user.follow()
+            print('Followed the user')
+       
+        
+
+        time.sleep(2200)
+
+    except tweepy.TweepError as e:
+        print(e.reason)
+
+    except StopIteration:
+        break   
+        
+     
     
 
      
