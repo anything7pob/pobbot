@@ -34,7 +34,7 @@ if __name__ == "__main__":
      text = random.choice(open('twoots.txt').readlines())
      #happy = random.choice(wordz)
      twitter.tweet(text) #You probably want to remove this line  
-     
+     time.sleep(200)
     
 for tweet in tweepy.Cursor(api.search, q='#Romford''#Chelmsford''Roofing').items():
     try:
