@@ -20,19 +20,7 @@ class TwitterAPI:
         self.api = tweepy.API(auth)
         api = tweepy.API(auth)
         
-    def tweet(self, message):
-        """Send a tweet"""
-        self.api.update_status(status=message)
 
-#wordz = ['hiya','helloz']
-        
-if __name__ == "__main__":
-    twitter = TwitterAPI()
-   
-    import random
-    text = random.choice(open('twoots.txt').readlines())
-    #happy = random.choice(wordz)
-    twitter.tweet(text) #You probably want to remove this line
     
 
 for tweet in tweepy.Cursor(api.search, q='romford''chelmsford''essex''roofing').items():
