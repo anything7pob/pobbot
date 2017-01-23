@@ -51,7 +51,7 @@ if __name__ == "__main__":
                 print('Followed the user')
                 
                 
-       time.sleep(2200)    
+     time.sleep(2200)    
      
         
 
