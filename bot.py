@@ -1,6 +1,7 @@
 import tweepy
 from time import sleep
 class TwitterAPI:
+    api = tweepy.API(auth)
     """
     Class for accessing the Twitter API.
     Requires API credentials to be available in environment
