@@ -54,7 +54,7 @@ for tweet in tweepy.Cursor(api.search, q='#Romford''#Chelmsford''Roofing').items
        
         
 
-        sleep(3600)
+        time.sleep(2200)
 
     except tweepy.TweepError as e:
         print(e.reason)
