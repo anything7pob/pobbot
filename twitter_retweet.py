@@ -1,10 +1,12 @@
 import tweepy
 from time import sleep
-from credentials import *
-
-auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
-auth.set_access_token(access_token, access_token_secret)
-api = tweepy.API(auth)
+class TwitterAPI:
+    """
+    Class for accessing the Twitter API.
+    Requires API credentials to be available in environment
+    variables. These will be set appropriately if the bot was created
+    with init.sh included with the heroku-twitterbot-starter
+    """
 
 for tweet in tweepy.Cursor(api.search, q='#Romford','#Chelmsford','Roofing').items():
     try:
