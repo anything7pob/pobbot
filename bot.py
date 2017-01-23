@@ -18,7 +18,8 @@ class TwitterAPI:
         access_token_secret = os.environ.get('TWITTER_ACCESS_TOKEN_SECRET')
         auth.set_access_token(access_token, access_token_secret)
         self.api = tweepy.API(auth)
-
+        api = tweepy.API(auth)
+        
     def tweet(self, message):
         """Send a tweet"""
         self.api.update_status(status=message)
@@ -35,22 +36,22 @@ if __name__ == "__main__":
      twitter.tweet(text) #You probably want to remove this line
     
 
-    for tweet in tweepy.Cursor(api.search, q='romford''chelmsford''essex''roofing').items():
-    try:
-        print('\nTweet by: @' + tweet.user.screen_name)
+for tweet in tweepy.Cursor(api.search, q='romford''chelmsford''essex''roofing').items():
+try:
+    print('\nTweet by: @' + tweet.user.screen_name)
 
-        tweet.retweet()
-        print('Retweeted the tweet')
+    tweet.retweet()
+    print('Retweeted the tweet')
 
-        # Favorite the tweet
-        tweet.favorite()
-        print('Favorited the tweet')
+    # Favorite the tweet
+    tweet.favorite()
+    print('Favorited the tweet')
 
-        # Follow the user who tweeted
-        tweet.user.follow()
-        print('Followed the user')
+    # Follow the user who tweeted
+    tweet.user.follow()
+    print('Followed the user')
         
-        
+    time.sleep(3200)    
         
         
         
