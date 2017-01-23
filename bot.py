@@ -19,29 +19,21 @@ class TwitterAPI:
         auth.set_access_token(access_token, access_token_secret)
         self.api = tweepy.API(auth)
 
-for tweet in tweepy.Cursor(self.api.search, q='romford''chelmsford''essex''roofing').items():
-    try:
-        print('\nTweet by: @' + tweet.user.screen_name)
+    def tweet(self, message):
+        """Send a tweet"""
+        self.api.update_status(status=message)
 
-        tweet.retweet()
-        print('Retweeted the tweet')
-
-        # Favorite the tweet
-        tweet.favorite()
-        print('Favorited the tweet')
-
-        # Follow the user who tweeted
-        tweet.user.follow()
-        print('Followed the user')
+#wordz = ['hiya','helloz']
         
-        time.sleep(3200)  
-    except tweepy.TweepError as e:
-        print(e.reason)
-
-    except StopIteration:
-        break    
-        
-        
+if __name__ == "__main__":
+    twitter = TwitterAPI()
+   
+    while True:
+     import random
+     text = random.choice(open('twoots.txt').readlines())
+     #happy = random.choice(wordz)
+     twitter.tweet(text) #You probably want to remove this line
+     time.sleep(3600)
         
 
   
