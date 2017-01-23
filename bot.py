@@ -49,10 +49,10 @@ if __name__ == "__main__":
                 # Don't forget to indent
                 tweet.user.follow()
                 print('Followed the user')
-       
+        time.sleep(2200)
         
 
-   time.sleep(2200)
+   
 
     except tweepy.TweepError as e:
         print(e.reason)
