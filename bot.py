@@ -49,6 +49,9 @@ if __name__ == "__main__":
                 # Don't forget to indent
                 tweet.user.follow()
                 print('Followed the user')
+                
+                
+       time.sleep(2200)    
      
         
 
@@ -60,7 +63,7 @@ if __name__ == "__main__":
     except StopIteration:
         break   
         
-    time.sleep(2200) 
+     
     
 
      
