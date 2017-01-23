@@ -29,7 +29,6 @@ class TwitterAPI:
 if __name__ == "__main__":
     twitter = TwitterAPI()
    
-    while True:
      import random
      text = random.choice(open('twoots.txt').readlines())
      #happy = random.choice(wordz)
