@@ -18,8 +18,7 @@ class TwitterAPI:
         access_token_secret = os.environ.get('TWITTER_ACCESS_TOKEN_SECRET')
         auth.set_access_token(access_token, access_token_secret)
         self.api = tweepy.API(auth)
-       
-    for tweet in tweepy.Cursor(self.api.search, q='romford''chelmsford''essex''roofing').items():
+for tweet in tweepy.Cursor(self.api.search, q='romford''chelmsford''essex''roofing').items():
     try:
         print('\nTweet by: @' + tweet.user.screen_name)
 
