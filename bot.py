@@ -37,21 +37,21 @@ if __name__ == "__main__":
     
 
 for tweet in tweepy.Cursor(api.search, q='romford''chelmsford''essex''roofing').items():
-try:
-    print('\nTweet by: @' + tweet.user.screen_name)
+    try:
+        print('\nTweet by: @' + tweet.user.screen_name)
 
-    tweet.retweet()
-    print('Retweeted the tweet')
+        tweet.retweet()
+        print('Retweeted the tweet')
 
-    # Favorite the tweet
-    tweet.favorite()
-    print('Favorited the tweet')
+        # Favorite the tweet
+        tweet.favorite()
+        print('Favorited the tweet')
 
-    # Follow the user who tweeted
-    tweet.user.follow()
-    print('Followed the user')
+        # Follow the user who tweeted
+        tweet.user.follow()
+        print('Followed the user')
         
-    time.sleep(3200)    
+        time.sleep(3200)    
         
         
         
