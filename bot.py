@@ -35,22 +35,3 @@ if __name__ == "__main__":
      twitter.tweet(text) #You probably want to remove this line
      time.sleep(1080)
         
-for tweet in tweepy.Cursor(api.search, q='#fbpe').items():
-    try:
-        print('\nTweet by: @' + tweet.user.screen_name)
-
-        tweet.retweet()
-        print('Retweeted the tweet')
-
-        # Follow the user who tweeted
-        tweet.user.follow()
-        print('Followed the user')
-
-         time.sleep(5)
-
-    except tweepy.TweepError as e:
-        print(e.reason)
-
-    except StopIteration:
-        break
-  
