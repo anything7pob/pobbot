@@ -33,7 +33,7 @@ if __name__ == "__main__":
      text = random.choice(open('twoots.txt').readlines())
      #happy = random.choice(wordz)
      twitter.tweet(text) #You probably want to remove this line
-   
+     time.sleep(1080)
         
 for tweet in tweepy.Cursor(api.search, q='#fbpe').items():
     try:
@@ -46,7 +46,7 @@ for tweet in tweepy.Cursor(api.search, q='#fbpe').items():
         tweet.user.follow()
         print('Followed the user')
 
-         time.sleep(1080)
+         time.sleep(5)
 
     except tweepy.TweepError as e:
         print(e.reason)
