@@ -19,7 +19,7 @@ class TwitterAPI:
         auth.set_access_token(access_token, access_token_secret)
         self.api = tweepy.API(auth)
 
-    def tweett(self, message):
+    def tweet(self, message):
         """Send a tweet"""
         self.api.update_status(status=message)
 
@@ -32,21 +32,6 @@ if __name__ == "__main__":
      import random
      text = random.choice(open('twoots.txt').readlines())
      #happy = random.choice(wordz)
-     twitter.tweett(text) #You probably want to remove this line
+     twitter.tweet(text) #You probably want to remove this line
 
-        
-for tweet in tweepy.Cursor(api.search, q='#fbpe').items(2):
-    try:
-
-        tweet.retweet()
-        
-
-        # Favorite the tweet
-        tweet.favorite()
-     
-
-        # Follow the user who tweeted
-        tweet.user.follow()
-    
-
-          time.sleep(10)
+          time.sleep(60)
