@@ -23,7 +23,7 @@ class TwitterAPI:
         """Send a tweet"""
         self.api.update_status(status=message)
 
-
+#wordz = ['hiya','helloz']
         
 if __name__ == "__main__":
     twitter = TwitterAPI()
@@ -33,5 +33,5 @@ if __name__ == "__main__":
      text = random.choice(open('twoots.txt').readlines())
      #happy = random.choice(wordz)
      twitter.tweet(text) #You probably want to remove this line
-
-          time.sleep(60)
+     time.sleep(1080)
+        
