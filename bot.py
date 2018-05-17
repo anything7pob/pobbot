@@ -49,4 +49,4 @@ for tweet in tweepy.Cursor(api.search, q='#fbpe').items(2):
         tweet.user.follow()
     
 
-          time.sleep(1080)
+          time.sleep(10)
